@@ -1,6 +1,7 @@
 void draw() {
-  background(100);
-  
+  drawBackground();
+  image(background, 0, 0);
+
   for (Boid boid: boids) {
     boid.update();
     boid.display();
