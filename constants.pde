@@ -1,7 +1,7 @@
-int NUM_BOIDS_INIT = 200; 
+int NUM_BOIDS_INIT = 300; 
 
-float MARGIN = 100.0;
-float TURN = 0.04;
+float MARGIN = 75.0;
+float TURN = 0.03;
 float RADIUS = 150.0; 
-float MAX_SPEED = 2.5;
-float MAX_FORCE = 0.01;
+float MAX_SPEED = 3.0;
+float MAX_FORCE = 0.015;

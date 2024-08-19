@@ -21,19 +21,14 @@ class Boid extends Flockable {
   }  
   
   void update() {
-    align();
-    cohere();
-    separate();
+    flock();
     
     turn();
     
     velocity.add(acceleration);
     velocity.limit(MAX_SPEED);
-    
-    if (velocity.mag() < 1.5) {
-      velocity.setMag(1.5);
-    }
-    
+
+    if (velocity.mag() < 1) { velocity.setMag(1); }
     
     position.add(velocity);
   }
