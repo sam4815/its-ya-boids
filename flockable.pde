@@ -1,6 +1,6 @@
-float separation = 0.006;
-float alignment = 0.008;
-float cohesion = 0.008;
+float separation = 0.003;
+float alignment = 0.006;
+float cohesion = 0.007;
 
 class Flockable {
   PVector position = new PVector();
@@ -28,6 +28,7 @@ class Flockable {
       
       PVector difference = PVector.sub(position, otherBoid.position);
       separationTarget.add(difference.div(distance * distance));
+      
       
       cohesionTarget.add(otherBoid.position);
       

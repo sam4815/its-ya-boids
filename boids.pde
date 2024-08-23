@@ -1,7 +1,7 @@
 ArrayList<Boid> boids;
 
 void setup() {
-  size(500, 500);
+  size(800, 400);
   surface.setResizable(true);
   
   initializeBoidShape();

@@ -7,14 +7,23 @@ void drawBackground() {
   background = createGraphics(width, height);
   background.beginDraw();
   background.background(100);
-  color from = color(#2E4057);
-  color to = color(#DBCBD8);
+  color from = color(#96a2ba);
+  color mid = color(#ac9396);
+  color to = color(#907d8f);
   
-  for (float x = 0; x < width; x += 1) {
-    color interA = lerpColor(from, to, x/width);
+  for (float y = 0; y < height/2; y += 1) {
+    color interA = lerpColor(from, mid, y/(height/2));
     background.stroke(interA);
     background.fill(interA);
-    background.rect(x, 0, 1, height);
+    background.rect(0, y, width, 1);
+  }
+  
+  for (float y = height/2; y < height; y += 1) {
+    color interB = lerpColor(mid, to, (y-height/2)/height/2);
+    println(interB);
+    background.stroke(interB);
+    background.fill(interB);
+    background.rect(0, y, width, 1);
   }
   
   background.endDraw();
